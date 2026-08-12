@@ -3,8 +3,8 @@ import Login from "./pages/Login.jsx";
 import LoginContextProvider from "./context/LoginContextProvider.jsx";
 import "./styles/App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Productssssss from "./pages/Productssssss.jsx"
 import Products from "./pages/Products.jsx"
-import Home from "./pages/Home.jsx"
 import ProtectedRoutes from './authentication/ProtectedRoutes.jsx';
 import Signup from "./pages/Signup.jsx";
 import PageNotFound from "./pages/PageNotFound.jsx";
@@ -24,11 +24,11 @@ function App() {
             <Route path="/Login" element={<Login />} />
             <Route path="/Signup" element={<Signup />} />
             <Route path="/" element={<ProtectedRoutes>
-              <Home />
+              <Products />
             </ProtectedRoutes>
             } />
-            <Route path="/Products" element={<ProtectedRoutes>
-              <Products />
+            <Route path="/Productssssss" element={<ProtectedRoutes>
+              <Productssssss />
             </ProtectedRoutes>} />
           </Routes>
         </BrowserRouter>

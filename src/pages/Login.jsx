@@ -104,7 +104,7 @@ const Login = () => {
             setStoredUserId(() => { return accessTokenUserId });
             setIsLoggedIn(() => { return true });
 
-            localStorage.setItem("login", JSON.stringify({
+            sessionStorage.setItem("login", JSON.stringify({
                 "accessToken": generatedToken,
                 "accessTokenUserId": accessTokenUserId, "isLoggedIn": true
             }))
@@ -115,8 +115,8 @@ const Login = () => {
             console.log("Current userId: ", accessTokenUserId);
             console.log(message);
 
-            let user = JSON.parse(localStorage.getItem("login"));
-            console.log("localStorage " + user.isLoggedIn)
+            let user = JSON.parse(sessionStorage.getItem("login"));
+            console.log("sessionStorage " + user.isLoggedIn)
 
         }
 

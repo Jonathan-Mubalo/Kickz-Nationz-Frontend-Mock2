@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 
 const ProtectedRoutes = ({ children }) => {
     
-const access = JSON.parse(localStorage.getItem("login"))
+const access = JSON.parse(sessionStorage.getItem("login"))
 
 if(access != null && access.isLoggedIn){
     return children;
